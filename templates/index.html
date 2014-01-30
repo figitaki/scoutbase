@@ -1,0 +1,29 @@
+$def with (teams)
+<a href="new"><input type='button' value='New Team' /></a>
+<table>
+<tr>
+	<td>#</td>
+	<td>Name</td>
+	<td>IR</td>
+	<td>Ramp</td>
+	<td>Flag</td>
+	<td>Hang</td>
+	<td>Auto</td>
+	<td>Tele</td>
+	<td>End</td>
+	<td>Ovrl</td>
+</tr>
+$for team in teams:
+	<tr>
+	<td>$team.number</td>
+	<td>$team.name</td>
+	<td>Y</td>
+	<td>Y</td>
+	<td>N</td>
+	<td>Y</td>
+	<td>$team.autonomous</td>
+	<td>$team.tele_op</td>
+	<td>$team.endgame</td>
+	<td>$team.overall</td>
+	</tr>
+</table>
