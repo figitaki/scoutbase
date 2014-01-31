@@ -8,13 +8,35 @@ $def with (content)
 </head>
 <body>
 
-<div class='navbar'>
-	<a href='/'><p>Home</p></a>
+<div class='menubar'>
+	<a href='/'>Sign Out</a> | <a href='/'>Home</a>
+</div>
+
+<div class='header'>
+	<span class='logo'>ScoutBase</span>
+	<div class='navbar'>
+		<a href='/' 
+
+$if content.title == 'home':
+	class="active"
+
+>Teams</a>
+<a href='new'
+
+$if content.title == 'new':
+	class="active"
+
+>New Team</a>
+	</div>
 </div>
 
 <div class='content'>
 	$:content
 </div>
+
+<footer>
+	<p>Powered by <a href='http://www.webpy.org/'>webpy</a></p>
+</footer>
 
 </body>
 </html>
