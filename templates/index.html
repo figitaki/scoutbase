@@ -1,29 +1,41 @@
 $def with (teams)
 $var title = 'home'
-<table>
-<tr>
-	<td>#</td>
-	<td>Name</td>
-	<td>IR</td>
-	<td>Ramp</td>
-	<td>Flag</td>
-	<td>Hang</td>
-	<td>Auto</td>
-	<td>Tele</td>
-	<td>End</td>
-	<td>Ovrl</td>
+<table class='teams'>
+<tr class='heading'>
+	<th>#</th>
+	<th>Name</th>
+	<th>IR</th>
+	<th>R</th>
+	<th>F</th>
+	<th>H</th>
+	<th>Auto</th>
+	<th>Tele</th>
+	<th>End</th>
+	<th>Over</th>
 </tr>
 $for team in teams:
-	<tr>
-	<td>$team.number</td>
-	<td>$team.name</td>
-	<td>Y</td>
-	<td>Y</td>
-	<td>N</td>
-	<td>Y</td>
-	<td>$team.autonomous</td>
-	<td>$team.tele_op</td>
-	<td>$team.endgame</td>
-	<td>$team.overall</td>
+	<tr class='$loop.parity'>
+		<td>$team.number</td>
+		<td>$team.name</td>
+		$if team.auto_ir:
+			<td>$u"\u2713"</td>
+		$else:
+			<td></td>
+		$if team.auto_ramp:
+			<td>$u"\u2713"</td>
+		$else:
+			<td></td>
+		$if team.end_flag:
+			<td>$u"\u2713"</td>
+		$else:
+			<td></td>
+		$if team.end_hang:
+			<td>$u"\u2713"</td>
+		$else:
+			<td></td>
+		<td>$team.autonomous</td>
+		<td>$team.tele_op</td>
+		<td>$team.endgame</td>
+		<td>$team.overall</td>
 	</tr>
 </table>

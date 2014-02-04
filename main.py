@@ -8,49 +8,50 @@ urls = (
 	'/', 'index',
 	'/new', 'new',
 	'/add', 'add',
+	'/team/(.*)', 'view',
 	'/static/(.*)', 'static',
 )
 
 myForm = form.Form(
-	form.Textbox('name', description='Team Name'),
-	form.Textbox('number', description='Team Number'),
-	form.Textbox('autonomous', description='Autonomous'),
-	form.Checkbox('auto_blocks', description='Blocks'),
-	form.Checkbox('auto_ir', description='IR'),
+	form.Textbox('name', description='Team Name', size='36'),
+	form.Textbox('number', description='Team Number', size='36'),
+	form.Textbox('autonomous', description='Autonomous', size='4', value='0.0'),
+	form.Checkbox('auto_blocks', description='Blocks', value='false'),
+	form.Checkbox('auto_ir', description='IR', value='false'),
 	form.Dropdown('auto_consistency', range(0,6), description='Consistency'),
-	form.Textbox('tele_op', description='Tele-Op'),
-	form.Checkbox('tele_blocks', description='Blocks'),
+	form.Textbox('tele_op', description='Tele-Op', size='4', value='0.0'),
+	form.Checkbox('tele_blocks', description='Blocks', value='false'),
 	form.Checkbox('tele_elevate', description='Raise Blocks'),
 	form.Dropdown('tele_speed', range(0,6), description='Block Speed'),
-	form.Dropdown('tele_efficency', range(0,6), description='Block Effeciency'),
+	form.Dropdown('tele_efficiency', range(0,6), description='Block Effeciency'),
 	form.Dropdown('tele_drive', range(0,6), description='Drive System'),
-	form.Textbox('endgame', description='Endgame'),
-	form.Checkbox('end_flag', description='Flag'),
-	form.Checkbox('end_hang', description='Hang'),
+	form.Textbox('endgame', description='Endgame', size='4', value='0.0'),
+	form.Checkbox('end_flag', description='Flag', value='false'),
+	form.Checkbox('end_hang', description='Hang', value='false'),
 	form.Dropdown('end_speed', range(0,6), description='Speed'),
-	form.Dropdown('end_effeciency', range(0,6), description='Effeciency'),
-	form.Button('Submit'))
+	form.Dropdown('end_effeciency', range(0,6), description='Effeciency'))
 
 class index:
 	def GET(self):
 		dbTeams = db.select('teams')
-		teams = []
-		for dbTeam in dbTeams:
-			team = Team()
-			team.name = dbTeam.name
-			team.number = dbTeam.number
-			teams.append(team)
-		return render.index(teams)
+		return render.index(dbTeams)
 
 class new:
 	def GET(self):
 		f = myForm()
 		return render.new(f)
 
+class view:
+	def GET(self, team):
+		teams = list(db.select('teams', where='number=\'%s\'' % team))
+		myTeam = ''
+		return teams[0].name
+
 class add:
 	def POST(self):
-		i = web.input()
-		n = db.insert('teams', name=i.name, number=i.number, auto_ir='f')
+		f = myForm()
+		if f.validates():
+			n = db.insert('teams', **f.d)
 		return web.seeother('/')
 
 

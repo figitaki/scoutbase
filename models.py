@@ -25,3 +25,15 @@ class Team(object):
 	collaboration = 0.0
 	overall = 0.0
 	notes = ''
+
+	def __init__(self, data):
+		print data
+		self.name = data['name']
+		self.number = data['number']
+		self.autonomous = data['autonomous']
+
+	def insert(self, db):
+		db.insert('teams',
+			name=self.name,
+			number=self.number,
+			auto_ir=self.auto_ir)

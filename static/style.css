@@ -39,28 +39,99 @@ body {
 }
 
 .content {
-	padding: 10px;
-}
-
-form {
-	width: 240px;
-	margin: 0px auto;
-	text-align: right;
-}
-
-tr > #autonomous {
-	border-bottom: 1px solid #aaaacc;
+	margin: 30px 20px;
 }
 
 footer {
+	margin-top: 10px;
+	border-top: 1px solid #cfcff1;
+	padding-top: 10px;
+	font-size: .9em;
+	text-align: center;
+	color: #aaaaaa;
+}
+
+/**
+ *  Index Table Style
+ **/
+
+.teams {
+	margin: 0px auto;
+	width: 60%;
+	min-width: 600px;
+	border-collapse: collapse;
+	border-radius: 7px;
 	text-align: center;
 }
 
+.teams td, th {
+	padding: 4px 6px;
+	margin: 0px;
+}
+
+.teams tr.even {
+	background: #f3f3ff;
+}
+
+tr.heading {
+	background: #eeeef9;
+	border-bottom: 2px solid #bbbbdd;
+}
+
+/**
+ *  New Team Form Style
+ **/
+
+form table td {
+	text-align: left;
+}
+
+form table th {
+	text-align: right;
+}
+
+form {
+	width: 370px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+table {
+	width: 100%;
+}
+
+#submit {
+	padding: 4px 6px;
+}
+
+input[type='text'] {
+	font-size: .9em;
+	height: 26px;
+	padding: 2px 6px;
+	border: 1px solid #aaaaaa;
+	border-radius: 5px;
+	box-shadow: inset 0px 1px 3px -1px rgba(0,0,0,.5);
+}
+
+input[type='checkbox'] {
+	width: 18px;
+	height: 18px;
+}
+
+select {
+	height: 30px;
+}
+
+form table tr {
+	height: 24px;
+}
+
 @media (max-width: 640px) {
-	body {
-		width: 100%;
+	.content {
+		margin: 10px;
 	}
-	table {
+	.teams {
 		width: 100%;
+		min-width: 0px;
 	}
 }
