@@ -1,0 +1,169 @@
+0.0 (1): SELECT * FROM teams WHERE number='8203'
+127.0.0.1:54295 - - [08/Feb/2014 07:47:07] "HTTP/1.1 GET /edit/8203" - 200 OK
+127.0.0.1:54295 - - [08/Feb/2014 07:47:07] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+0.0 (1): SELECT * FROM teams WHERE number='8203'
+127.0.0.1:54321 - - [08/Feb/2014 07:48:20] "HTTP/1.1 GET /edit/8203" - 200 OK
+127.0.0.1:54321 - - [08/Feb/2014 07:48:20] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+127.0.0.1:54321 - - [08/Feb/2014 07:48:20] "HTTP/1.1 GET /static/jquery.min.js" - 200 
+0.0 (1): SELECT * FROM teams WHERE number='8203'
+127.0.0.1:54324 - - [08/Feb/2014 07:49:25] "HTTP/1.1 GET /edit/8203" - 200 OK
+127.0.0.1:54324 - - [08/Feb/2014 07:49:25] "HTTP/1.1 GET /static/style.css" - 304 Not Modified127.0.0.1:54325 - - [08/Feb/2014 07:49:25] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+
+0.0 (1): SELECT * FROM teams WHERE number='8203'
+127.0.0.1:54325 - - [08/Feb/2014 07:49:28] "HTTP/1.1 GET /edit/8203" - 200 OK
+0.0 (1): SELECT * FROM teams WHERE number='8203'
+127.0.0.1:54330 - - [08/Feb/2014 07:50:08] "HTTP/1.1 GET /edit/8203" - 200 OK
+127.0.0.1:54330 - - [08/Feb/2014 07:50:08] "HTTP/1.1 GET /static/style.css" - 200 
+127.0.0.1:54331 - - [08/Feb/2014 07:50:08] "HTTP/1.1 GET /static/jquery.min.js" - 200 
+0.0 (1): SELECT * FROM teams WHERE number='8203'
+127.0.0.1:54335 - - [08/Feb/2014 07:51:04] "HTTP/1.1 GET /edit/8203" - 200 OK
+127.0.0.1:54335 - - [08/Feb/2014 07:51:04] "HTTP/1.1 GET /static/style.css" - 304 Not Modified127.0.0.1:54336 - - [08/Feb/2014 07:51:04] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+
+0.0 (1): SELECT * FROM teams WHERE number='8203'
+127.0.0.1:54341 - - [08/Feb/2014 07:53:56] "HTTP/1.1 GET /edit/8203" - 200 OK
+127.0.0.1:54341 - - [08/Feb/2014 07:53:56] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+127.0.0.1:54342 - - [08/Feb/2014 07:53:56] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 239, in process
+    return self.handle()
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 420, in _delegate
+    return handle_class(cls)
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 396, in handle_class
+    return tocall(*args)
+TypeError: POST() takes exactly 1 argument (2 given)
+
+127.0.0.1:54342 - - [08/Feb/2014 07:53:59] "HTTP/1.1 POST /edit/edit" - 500 Internal Server Error
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 239, in process
+    return self.handle()
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 420, in _delegate
+    return handle_class(cls)
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 396, in handle_class
+    return tocall(*args)
+TypeError: POST() takes exactly 1 argument (2 given)
+
+127.0.0.1:54353 - - [08/Feb/2014 07:54:53] "HTTP/1.1 POST /edit/edit" - 500 Internal Server Error
+0.0 (1): SELECT * FROM teams WHERE number='8203'
+127.0.0.1:54353 - - [08/Feb/2014 07:55:03] "HTTP/1.1 GET /edit/8203" - 200 OK
+127.0.0.1:54353 - - [08/Feb/2014 07:55:03] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+127.0.0.1:54356 - - [08/Feb/2014 07:55:03] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+0.0 (1): SELECT * FROM teams WHERE number='8203'
+127.0.0.1:54361 - - [08/Feb/2014 07:55:46] "HTTP/1.1 GET /edit/8203" - 200 OK
+127.0.0.1:54361 - - [08/Feb/2014 07:55:46] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+127.0.0.1:54362 - - [08/Feb/2014 07:55:46] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+0.0 (1): SELECT * FROM teams
+127.0.0.1:54362 - - [08/Feb/2014 07:55:53] "HTTP/1.1 GET /" - 200 OK
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54362 - - [08/Feb/2014 07:55:55] "HTTP/1.1 GET /team/4707" - 200 OK
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54366 - - [08/Feb/2014 07:56:48] "HTTP/1.1 GET /team/4707" - 200 OK
+127.0.0.1:54366 - - [08/Feb/2014 07:56:48] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54366 - - [08/Feb/2014 07:56:49] "HTTP/1.1 GET /edit/4707" - 200 OK
+127.0.0.1:54366 - - [08/Feb/2014 07:56:49] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+0.0 (1): SELECT * FROM teams
+127.0.0.1:54366 - - [08/Feb/2014 07:56:56] "HTTP/1.1 GET /" - 200 OK
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54366 - - [08/Feb/2014 07:56:58] "HTTP/1.1 GET /team/4707" - 200 OK
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54366 - - [08/Feb/2014 07:57:01] "HTTP/1.1 GET /edit/4707" - 200 OK
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54373 - - [08/Feb/2014 07:58:16] "HTTP/1.1 GET /edit/4707" - 200 OK
+127.0.0.1:54374 - - [08/Feb/2014 07:58:16] "HTTP/1.1 GET /static/jquery.min.js" - 200 127.0.0.1:54373 - - [08/Feb/2014 07:58:16] "HTTP/1.1 GET /static/style.css" - 200 
+
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54376 - - [08/Feb/2014 07:58:56] "HTTP/1.1 GET /edit/4707" - 200 OK
+127.0.0.1:54376 - - [08/Feb/2014 07:58:56] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+127.0.0.1:54378 - - [08/Feb/2014 07:58:56] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54486 - - [08/Feb/2014 08:01:57] "HTTP/1.1 GET /edit/4707" - 200 OK
+127.0.0.1:54486 - - [08/Feb/2014 08:01:58] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+127.0.0.1:54488 - - [08/Feb/2014 08:01:58] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54502 - - [08/Feb/2014 08:03:05] "HTTP/1.1 GET /edit/4707" - 200 OK
+127.0.0.1:54502 - - [08/Feb/2014 08:03:05] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+127.0.0.1:54504 - - [08/Feb/2014 08:03:05] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54514 - - [08/Feb/2014 08:04:15] "HTTP/1.1 GET /edit/4707" - 200 OK
+127.0.0.1:54514 - - [08/Feb/2014 08:04:15] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+127.0.0.1:54516 - - [08/Feb/2014 08:04:15] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54522 - - [08/Feb/2014 08:05:04] "HTTP/1.1 GET /edit/4707" - 200 OK
+127.0.0.1:54522 - - [08/Feb/2014 08:05:04] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+127.0.0.1:54524 - - [08/Feb/2014 08:05:04] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 239, in process
+    return self.handle()
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 420, in _delegate
+    return handle_class(cls)
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 396, in handle_class
+    return tocall(*args)
+  File "/Users/figitaki/Development/scoutbase/main.py", line 56, in GET
+    return render.edit(f, teams[0])
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/template.py", line 1020, in template
+    return self._base(t(*a, **kw))
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/template.py", line 881, in __call__
+    return BaseTemplate.__call__(self, *a, **kw)
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/template.py", line 808, in __call__
+    return self.t(*a, **kw)
+  File "templates/edit.html", line 26, in __template__
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/utils.py", line 76, in __getattr__
+    raise AttributeError, k
+AttributeError: 'tele_effeciency'
+
+127.0.0.1:54528 - - [08/Feb/2014 08:05:24] "HTTP/1.1 GET /edit/4707" - 500 Internal Server Error
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54528 - - [08/Feb/2014 08:05:32] "HTTP/1.1 GET /edit/4707" - 200 OK
+127.0.0.1:54528 - - [08/Feb/2014 08:05:32] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+127.0.0.1:54528 - - [08/Feb/2014 08:05:32] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54528 - - [08/Feb/2014 08:05:40] "HTTP/1.1 GET /edit/4707" - 200 OK
+127.0.0.1:54528 - - [08/Feb/2014 08:05:40] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+127.0.0.1:54530 - - [08/Feb/2014 08:05:40] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54534 - - [08/Feb/2014 08:06:00] "HTTP/1.1 GET /edit/4707" - 200 OK
+127.0.0.1:54534 - - [08/Feb/2014 08:06:00] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+ 127.0.0.1:54536 - - [08/Feb/2014 08:06:00] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54538 - - [08/Feb/2014 08:06:36] "HTTP/1.1 GET /edit/4707" - 200 OK
+127.0.0.1:54538 - - [08/Feb/2014 08:06:36] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+127.0.0.1:54538 - - [08/Feb/2014 08:06:36] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54542 - - [08/Feb/2014 08:07:25] "HTTP/1.1 GET /edit/4707" - 200 OK
+127.0.0.1:54542 - - [08/Feb/2014 08:07:25] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+127.0.0.1:54544 - - [08/Feb/2014 08:07:25] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54546 - - [08/Feb/2014 08:08:27] "HTTP/1.1 GET /edit/4707" - 200 OK
+127.0.0.1:54546 - - [08/Feb/2014 08:08:27] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+127.0.0.1:54548 - - [08/Feb/2014 08:08:27] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+127.0.0.1:54550 - - [08/Feb/2014 08:08:42] "HTTP/1.1 POST /edit" - 404 Not Found
+127.0.0.1:54553 - - [08/Feb/2014 08:09:07] "HTTP/1.1 POST /edit" - 404 Not Found
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54553 - - [08/Feb/2014 08:09:11] "HTTP/1.1 GET /edit/4707" - 200 OK
+127.0.0.1:54553 - - [08/Feb/2014 08:09:11] "HTTP/1.1 GET /static/style.css" - 304 Not Modified
+127.0.0.1:54553 - - [08/Feb/2014 08:09:11] "HTTP/1.1 GET /static/jquery.min.js" - 304 Not Modified
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 239, in process
+    return self.handle()
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 420, in _delegate
+    return handle_class(cls)
+  File "/Library/Python/2.7/site-packages/web.py-0.37-py2.7.egg/web/application.py", line 396, in handle_class
+    return tocall(*args)
+TypeError: POST() takes exactly 1 argument (2 given)
+
+127.0.0.1:54553 - - [08/Feb/2014 08:09:20] "HTTP/1.1 POST /edit/4707" - 500 Internal Server Error
+0.02 (1): UPDATE teams SET auto_blocks = 't', end_speed = '2', tele_elevate = 'f', auto_consistency = '2', name = 'Matrix Beasts', tele_op = '3.2', end_flag = 't', notes = 'This is a really cool team, we should pick them.', end_effeciency = '0', number = '4707', end_hang = 't', tele_drive = '2', tele_blocks = 't', tele_speed = '2', auto_ir = 't', endgame = '2.3', autonomous = '4.4', tele_efficiency = '4' WHERE number='4707'
+127.0.0.1:54558 - - [08/Feb/2014 08:09:44] "HTTP/1.1 POST /edit/4707" - 303 See Other
+0.0 (1): SELECT * FROM teams
+127.0.0.1:54558 - - [08/Feb/2014 08:09:44] "HTTP/1.1 GET /" - 200 OK
+0.0 (1): SELECT * FROM teams WHERE number='4707'
+127.0.0.1:54558 - - [08/Feb/2014 08:09:49] "HTTP/1.1 GET /team/4707" - 200 OK

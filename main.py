@@ -9,6 +9,7 @@ urls = (
 	'/new', 'new',
 	'/add', 'add',
 	'/team/(.*)', 'view',
+	'/edit/(.*)', 'edit',
 	'/static/(.*)', 'static',
 )
 
@@ -47,6 +48,17 @@ class view:
 		teams = list(db.select('teams', where='number=\'%s\'' % team))
 		myTeam = ''
 		return render.view(teams[0])
+
+class edit:
+	def GET(self, team):
+		teams = list(db.select('teams', where='number=\'%s\'' % team))
+		f = myForm()
+		return render.edit(f, teams[0])
+	def POST(self, team):
+		f = myForm()
+		if f.validates():
+			n = db.update('teams', where='number=\'%s\'' % team, **f.d)
+		return web.seeother('/')
 
 class add:
 	def POST(self):

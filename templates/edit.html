@@ -1,0 +1,30 @@
+$def with (form, team)
+$var title = 'edit'
+<form method='post' action='/edit/$team.number'>
+$:form.render()
+<button id='submit'>Submit</button>
+</form>
+
+<script src='/static/jquery.min.js'></script>
+<script type='text/javascript'>
+var True = true;
+var False = false;
+$$('#name').val('$team.name');
+$$('#number').val('$team.number');
+$$('#autonomous').val($team.autonomous);
+$$('#auto_blocks_false').attr('checked', $team.auto_blocks);
+$$('#auto_ir_false').attr('checked', $team.auto_ir);
+$$('#auto_consistency').val($team.auto_consistency);
+$$('#tele_op').val($team.tele_op);
+$$('#tele_blocks_false').attr('checked', $team.tele_blocks);
+$$('#tele_elevate_false').attr('checked', $team.tele_elevate);
+$$('#tele_speed').val($team.tele_speed);
+$$('#tele_efficiency').val($team.tele_efficiency);
+$$('#tele_drive').val($team.tele_drive);
+$$('#endgame').val($team.endgame);
+$$('#end_flag_false').attr('checked', $team.end_flag);
+$$('#end_hang_false').attr('checked', $team.end_hang);
+$$('#end_speed').val($team.end_speed);
+$$('end_effeciency').val($team.end_effeciency);
+$$('notes').val($team.notes);
+</script>
