@@ -1,0 +1,31 @@
+$def with (team)
+$var title = 'view'
+<style>
+th {text-align: right;}
+table {width: 350px; margin: 0 auto;}
+</style>
+<table>
+<tr><th>Team Name</th><td>$team.name</td></tr>
+<tr><th>Team Number</th><td>$team.number</td></tr>
+<tr><th>----------------</th><td>-----------</td></tr>
+<tr><th>Autonomous</th><td>$team.autonomous</td></tr>
+<tr><th>Blocks</th><td>$team.auto_blocks</td></tr>
+<tr><th>Place IR</th><td>$team.auto_ir</td></tr>
+<tr><th>Auto Consistency</th><td>$team.auto_consistency</td></tr>
+<tr><th>----------------</th><td>-----------</td></tr>
+<tr><th>Tele-Op</th><td>$team.tele_op</td></tr>
+<tr><th>Blocks</th><td>$team.tele_blocks</td></tr>
+<tr><th>Raise Blocks</th><td>$team.tele_elevate</td></tr>
+<tr><th>Block Speed</th><td>$team.tele_speed</td></tr>
+<tr><th>Block Efficiency</th><td>$team.tele_efficiency</td></tr>
+<tr><th>Drive System</th><td>$team.tele_drive</td></tr>
+<tr><th>----------------</th><td>-----------</td></tr>
+<tr><th>Endgame</th><td>$team.endgame</td></tr>
+<tr><th>Flag</th><td>$team.end_flag</td></tr>
+<tr><th>Hang</th><td>$team.end_hang</td></tr>
+<tr><th>Speed</th><td>$team.end_speed</td></tr>
+<tr><th>Effeciency</th><td>$team.end_effeciency</td></tr>
+<tr><th>----------------</th><td>-----------</td></tr>
+<tr><th>Notes</th><td>$team.notes</td></tr>
+</table>
+

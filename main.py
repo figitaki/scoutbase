@@ -46,7 +46,7 @@ class view:
 	def GET(self, team):
 		teams = list(db.select('teams', where='number=\'%s\'' % team))
 		myTeam = ''
-		return teams[0].name
+		return render.view(teams[0])
 
 class add:
 	def POST(self):
