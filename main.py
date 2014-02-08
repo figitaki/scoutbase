@@ -29,7 +29,8 @@ myForm = form.Form(
 	form.Checkbox('end_flag', description='Flag', value='false'),
 	form.Checkbox('end_hang', description='Hang', value='false'),
 	form.Dropdown('end_speed', range(0,6), description='Speed'),
-	form.Dropdown('end_effeciency', range(0,6), description='Effeciency'))
+	form.Dropdown('end_effeciency', range(0,6), description='Effeciency'),
+	form.Textarea('notes', description='Notes'))
 
 class index:
 	def GET(self):
