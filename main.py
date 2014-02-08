@@ -19,6 +19,7 @@ myForm = form.Form(
 	form.Textbox('autonomous', description='Autonomous', size='4', value='0.0'),
 	form.Checkbox('auto_blocks', description='Blocks', value='false'),
 	form.Checkbox('auto_ir', description='IR', value='false'),
+	form.Checkbox('auto_ramp', description='Ramp', value='false')
 	form.Dropdown('auto_consistency', range(0,6), description='Consistency'),
 	form.Textbox('tele_op', description='Tele-Op', size='4', value='0.0'),
 	form.Checkbox('tele_blocks', description='Blocks', value='false'),
@@ -35,7 +36,9 @@ myForm = form.Form(
 
 class index:
 	def GET(self):
-		dbTeams = db.select('teams')
+		field = web.input(field='id')
+		order = web.input(order='ASC')
+		dbTeams = db.select('teams', order='%s %s' % (field.field, order.order))
 		return render.index(dbTeams)
 
 class new:
